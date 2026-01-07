@@ -2631,3 +2631,36 @@ input, select, textarea {
 				}
 
 	}
+
+	.contact-info {
+    list-style: none;
+    padding: 0;
+ 	}
+
+	.contact-info li {
+		margin-bottom: 1.5em;
+		padding-bottom: 1.5em;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+	}
+
+	.contact-info li:last-child {
+		border-bottom: none;
+	}
+
+	.contact-info h4 {
+		margin-bottom: 0.5em;
+		color: #333;
+	}
+
+	.contact-info p {
+		margin: 0;
+	}
+
+	.contact-info a {
+		color: #4acaa8;
+		text-decoration: none;
+	}
+
+	.contact-info a:hover {
+		text-decoration: underline;
+	}
