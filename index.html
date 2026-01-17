@@ -87,13 +87,17 @@
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/RhymeSearch.png" alt="" /></a>
+										<a href="#" class="image fit" onclick="openModal('rhymesearch'); return false;">
+											<img src="images/RhymeSearch.png" alt="" />
+										</a>
 										<header>
 											<h3>RhymeSearch</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/FoneFog.png" alt="" /></a>
+										<a href="#" class="image fit" onclick="openModal('fonefog'); return false;">
+											<img src="images/FoneFog.png" alt="" />
+										</a>
 										<header>
 											<h3>FoneFog</h3>
 										</header>
@@ -101,13 +105,17 @@
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/Calmera.png" alt="" /></a>
+										<a href="#" class="image fit" onclick="openModal('calmera'); return false;">
+											<img src="images/Calmera.png" alt="" />
+										</a>
 										<header>
 											<h3>Calmera</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/NP-Project.png" alt="" /></a>
+										<a href="#" class="image fit" onclick="openModal('max3sat'); return false;">
+											<img src="images/NP-Project.png" alt="" />
+										</a>
 										<header>
 											<h3>Max 3-SAT</h3>
 										</header>
@@ -115,13 +123,17 @@
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/SportsBetPro.png" alt="" /></a>
+										<a href="#" class="image fit" onclick="openModal('sportsbetpro'); return false;">
+											<img src="images/SportsBetPro.png" alt="" />
+										</a>
 										<header>
 											<h3>SportsBetPro</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/KILowBites.png" alt="" /></a>
+										<a href="#" class="image fit" onclick="openModal('kilowbites'); return false;">
+											<img src="images/KILowBites.png" alt="" />
+										</a>
 										<header>
 											<h3>KILowBites</h3>
 										</header>
@@ -132,6 +144,185 @@
 						</div>
 					</section>
 
+					<div id="rhymesearch" class="modal">
+					<div class="modal-content">
+						<span class="close" onclick="closeModal('rhymesearch')">&times;</span>
+						
+						<!-- Image Gallery -->
+						<div class="modal-gallery">
+							<button class="gallery-btn prev" onclick="changeSlide('rhymesearch', -1)">&#10094;</button>
+							<div class="gallery-container">
+								<img src="images/RhymeSearch.png" class="gallery-slide active" alt="RhymeSearch Image 1">
+								<img src="images/RhymeSearch2.png" class="gallery-slide" alt="RhymeSearch Image 2">
+								<img src="images/RhymeSearch3.png" class="gallery-slide" alt="RhymeSearch Image 3">
+							</div>
+							<button class="gallery-btn next" onclick="changeSlide('rhymesearch', 1)">&#10095;</button>
+						</div>
+						
+						<!-- Project Description -->
+						<div class="modal-description">
+							<h2>RhymeSearch</h2>
+							<p><strong>Technologies:</strong> JavaScript, HTML/CSS, REST API, Responsive Web Design</p>
+							<p>An interactive web application that visualizes rhyming words and word relationships
+								 using real-time API data. Features a responsive interface with dynamic visualizations 
+								 and event-driven interactions for an engaging user experience.</p>
+							<div class="modal-links">
+								<a href="https://github.com/yourusername/rhymesearch" target="_blank" class="button">
+									<i class="icon brands fa-github"></i> View Code
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal for FoneFog -->
+				<div id="fonefog" class="modal">
+					<div class="modal-content">
+						<span class="close" onclick="closeModal('fonefog')">&times;</span>
+						
+						<div class="modal-gallery">
+							<button class="gallery-btn prev" onclick="changeSlide('fonefog', -1)">&#10094;</button>
+							<div class="gallery-container">
+								<img src="images/FoneFog.png" class="gallery-slide active" alt="FoneFog Image 1">
+								<img src="images/FoneFog2.png" class="gallery-slide" alt="FoneFog Image 2">
+								<img src="images/FoneFog3.png" class="gallery-slide" alt="FoneFog Image 3">
+							</div>
+							<button class="gallery-btn next" onclick="changeSlide('fonefog', 1)">&#10095;</button>
+						</div>
+						
+						<div class="modal-description">
+							<h2>FoneFog</h2>
+							<p><strong>Technologies:</strong> JavaScript, HTML5, CSS3, Local Storage API, DOM Manipulation</p>
+							<p>An interactive grid-based map creator with customizable dimensions and a persistent save system. 
+								Users can toggle cells to create custom layouts, save their designs with unique names, and load 
+								previous creations from local storage.</p>
+							<div class="modal-links">
+								<a href="https://github.com/yourusername/fonefog" target="_blank" class="button">
+									<i class="icon brands fa-github"></i> View Code
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal for Calmera -->
+				<div id="calmera" class="modal">
+					<div class="modal-content">
+						<span class="close" onclick="closeModal('calmera')">&times;</span>
+						
+						<div class="modal-gallery">
+							<button class="gallery-btn prev" onclick="changeSlide('calmera', -1)">&#10094;</button>
+							<div class="gallery-container">
+								<img src="images/Calmera.png" class="gallery-slide active" alt="Calmera Image 1">
+								<img src="images/Calmera-2.png" class="gallery-slide" alt="Calmera Image 2">
+								<img src="images/Calmera-3.png" class="gallery-slide" alt="Calmera Image 3">
+							</div>
+							<button class="gallery-btn next" onclick="changeSlide('calmera', 1)">&#10095;</button>
+						</div>
+						
+						<div class="modal-description">
+							<h2>Calmera</h2>
+							<p><strong>Technologies:</strong> [Add your technologies here]</p>
+							<p>Description of Calmera project...</p>
+							<div class="modal-links">
+								<a href="https://github.com/yourusername/calmera" target="_blank" class="button">
+									<i class="icon brands fa-github"></i> View Code
+								</a>
+								<a href="#" target="_blank" class="button">
+									<i class="icon solid fa-external-link-alt"></i> Live Demo
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal for Max 3-SAT -->
+				<div id="max3sat" class="modal">
+					<div class="modal-content">
+						<span class="close" onclick="closeModal('max3sat')">&times;</span>
+						
+						<div class="modal-gallery">
+							<button class="gallery-btn prev" onclick="changeSlide('max3sat', -1)">&#10094;</button>
+							<div class="gallery-container">
+								<img src="images/NP-Project.png" class="gallery-slide active" alt="Max 3-SAT Image 1">
+								<img src="images/NP-Project-2.png" class="gallery-slide" alt="Max 3-SAT Image 2">
+							</div>
+							<button class="gallery-btn next" onclick="changeSlide('max3sat', 1)">&#10095;</button>
+						</div>
+						
+						<div class="modal-description">
+							<h2>Max 3-SAT</h2>
+							<p><strong>Technologies:</strong> [Add your technologies here]</p>
+							<p>Description of Max 3-SAT project...</p>
+							<div class="modal-links">
+								<a href="https://github.com/yourusername/max3sat" target="_blank" class="button">
+									<i class="icon brands fa-github"></i> View Code
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal for SportsBetPro -->
+				<div id="sportsbetpro" class="modal">
+					<div class="modal-content">
+						<span class="close" onclick="closeModal('sportsbetpro')">&times;</span>
+						
+						<div class="modal-gallery">
+							<button class="gallery-btn prev" onclick="changeSlide('sportsbetpro', -1)">&#10094;</button>
+							<div class="gallery-container">
+								<img src="images/SportsBetPro.png" class="gallery-slide active" alt="SportsBetPro Image 1">
+								<img src="images/SportsBetPro-2.png" class="gallery-slide" alt="SportsBetPro Image 2">
+								<img src="images/SportsBetPro-3.png" class="gallery-slide" alt="SportsBetPro Image 3">
+							</div>
+							<button class="gallery-btn next" onclick="changeSlide('sportsbetpro', 1)">&#10095;</button>
+						</div>
+						
+						<div class="modal-description">
+							<h2>SportsBetPro</h2>
+							<p><strong>Technologies:</strong> [Add your technologies here]</p>
+							<p>Description of SportsBetPro project...</p>
+							<div class="modal-links">
+								<a href="https://github.com/yourusername/sportsbetpro" target="_blank" class="button">
+									<i class="icon brands fa-github"></i> View Code
+								</a>
+								<a href="#" target="_blank" class="button">
+									<i class="icon solid fa-external-link-alt"></i> Live Demo
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal for KILowBites -->
+				<div id="kilowbites" class="modal">
+					<div class="modal-content">
+						<span class="close" onclick="closeModal('kilowbites')">&times;</span>
+						
+						<div class="modal-gallery">
+							<button class="gallery-btn prev" onclick="changeSlide('kilowbites', -1)">&#10094;</button>
+							<div class="gallery-container">
+								<img src="images/KILowBites.png" class="gallery-slide active" alt="KILowBites Image 1">
+								<img src="images/KILowBites-2.png" class="gallery-slide" alt="KILowBites Image 2">
+							</div>
+							<button class="gallery-btn next" onclick="changeSlide('kilowbites', 1)">&#10095;</button>
+						</div>
+						
+						<div class="modal-description">
+							<h2>KILowBites</h2>
+							<p><strong>Technologies:</strong> [Add your technologies here]</p>
+							<p>Description of KILowBites project...</p>
+							<div class="modal-links">
+								<a href="https://github.com/yourusername/kilowbites" target="_blank" class="button">
+									<i class="icon brands fa-github"></i> View Code
+								</a>
+								<a href="#" target="_blank" class="button">
+									<i class="icon solid fa-external-link-alt"></i> Live Demo
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 				<!-- About Me -->
 					<section id="about" class="three">
 						<div class="container">

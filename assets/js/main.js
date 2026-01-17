@@ -120,4 +120,77 @@
 					visibleClass: 'header-visible'
 				});
 
+		// Portfolio Modal Functionality
+		
+		// Track current slide for each project
+		var currentSlides = {};
+
+		// Open modal function
+		window.openModal = function(projectId) {
+			$('#' + projectId).css('display', 'block');
+			$body.css('overflow', 'hidden');
+			
+			// Initialize slide counter if it doesn't exist
+			if (!currentSlides[projectId]) {
+				currentSlides[projectId] = 0;
+			}
+		};
+
+		// Close modal function
+		window.closeModal = function(projectId) {
+			$('#' + projectId).css('display', 'none');
+			$body.css('overflow', 'auto');
+		};
+
+		// Change slides function
+		window.changeSlide = function(projectId, direction) {
+			var $modal = $('#' + projectId);
+			var $slides = $modal.find('.gallery-slide');
+			
+			// Remove active class from current slide
+			$slides.eq(currentSlides[projectId]).removeClass('active');
+			
+			// Update slide index
+			currentSlides[projectId] += direction;
+			
+			// Loop around if at the end
+			if (currentSlides[projectId] >= $slides.length) {
+				currentSlides[projectId] = 0;
+			}
+			if (currentSlides[projectId] < 0) {
+				currentSlides[projectId] = $slides.length - 1;
+			}
+			
+			// Add active class to new slide
+			$slides.eq(currentSlides[projectId]).addClass('active');
+		};
+
+		// Close modal when clicking outside of it
+		$window.on('click', function(event) {
+			if ($(event.target).hasClass('modal')) {
+				$(event.target).css('display', 'none');
+				$body.css('overflow', 'auto');
+			}
+		});
+
+		// Keyboard navigation
+		$(document).on('keydown', function(event) {
+			// Find which modal is currently open
+			var $openModal = $('.modal').filter(function() {
+				return $(this).css('display') === 'block';
+			});
+			
+			if ($openModal.length > 0) {
+				var modalId = $openModal.attr('id');
+				
+				if (event.key === 'ArrowLeft') {
+					changeSlide(modalId, -1);
+				} else if (event.key === 'ArrowRight') {
+					changeSlide(modalId, 1);
+				} else if (event.key === 'Escape') {
+					closeModal(modalId);
+				}
+			}
+		});
+
 })(jQuery);
